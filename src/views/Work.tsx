@@ -1,4 +1,4 @@
-import { Container, Card, Row, Col, Button } from "react-bootstrap";
+import { Container, Card, Row, Col } from "react-bootstrap";
 
 import mbajdistancen from "../assets/mbajdistancenproj.jpg";
 import exploreculture from "../assets/exploreculture.jpg";
@@ -6,7 +6,17 @@ import accepted from "../assets/accepted.jpg";
 import wwwsafe from "../assets/wwwsafe.jpg";
 import customerdb from "../assets/customerdb.jpg";
 
-import { WorkMainContainer } from "../styles";
+import rails from "../assets/rails.svg";
+import react from "../assets/react.svg";
+import redux from "../assets/redux.svg";
+import postgres from "../assets/postgresql.svg";
+
+import nodejs from "../assets/nodejs.svg";
+import express from "../assets/express.svg";
+
+import django from "../assets/django.svg";
+
+import { WorkMainContainer, CardSeeMore, BuiltWith } from "../styles";
 
 export const Work = () => {
   return (
@@ -27,7 +37,29 @@ export const Work = () => {
                       Customer database built with Rails, React, Redux, and
                       PostgreSQL.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <CardSeeMore>
+                      <a
+                        href="https://github.com/elionntechguy/railsdbproject"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        see more <i className="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </CardSeeMore>
+                    <BuiltWith>
+                      <a href="https://rubyonrails.org/">
+                        <img src={rails} alt="rails" />
+                      </a>
+                      <a href="https://reactjs.org/">
+                        <img src={react} alt="react" />
+                      </a>
+                      <a href="https://redux.js.org/">
+                        <img src={redux} alt="redux" />
+                      </a>
+                      <a href="https://www.postgresql.org/">
+                        <img src={postgres} alt="postgreSQL" />
+                      </a>
+                    </BuiltWith>
                   </Card.Body>
                 </Card>
               </Col>
@@ -40,7 +72,26 @@ export const Work = () => {
                       Mbaj Distancen App is a COVID-19 Statistics Web App that
                       fetches data from Mbaj Distancen API for Kosovo.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <CardSeeMore>
+                      <a
+                        href="https://elionntechguy.github.io/mbajdistancenapp"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        see more <i className="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </CardSeeMore>
+                    <BuiltWith>
+                      <a href="https://reactjs.org/">
+                        <img src={react} alt="react" />
+                      </a>
+                      <a href="https://nodejs.org/">
+                        <img src={nodejs} alt="nodejs" />
+                      </a>
+                      <a href="https://expressjs.com/">
+                        <img src={express} alt="express" />
+                      </a>
+                    </BuiltWith>
                   </Card.Body>
                 </Card>
               </Col>
@@ -54,7 +105,23 @@ export const Work = () => {
                       Culture through the most innovative and up-to-date methods
                       of the 21st century.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <CardSeeMore>
+                      <a
+                        href="https://github.com/elionntechguy/exploreculture"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        see more <i className="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </CardSeeMore>
+                    <BuiltWith>
+                      <a href="https://www.djangoproject.com/">
+                        <img src={django} alt="django" />
+                      </a>
+                      <a href="https://reactjs.org/">
+                        <img src={react} alt="react" />
+                      </a>
+                    </BuiltWith>
                   </Card.Body>
                 </Card>
               </Col>
@@ -68,7 +135,20 @@ export const Work = () => {
                       sees that the only solution for a better future Is
                       diversity and the unification of all.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <CardSeeMore>
+                      <a
+                        href="https://github.com/elionntechguy/accepted"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        see more <i className="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </CardSeeMore>
+                    <BuiltWith>
+                      <a href="https://www.djangoproject.com/">
+                        <img src={django} alt="django" />
+                      </a>
+                    </BuiltWith>
                   </Card.Body>
                 </Card>
               </Col>
@@ -76,22 +156,40 @@ export const Work = () => {
                 <Card>
                   <Card.Img variant="top" src={wwwsafe} />
                   <Card.Body>
-                    <Card.Title>wwwsafe</Card.Title>
+                    <Card.Title>www.safe</Card.Title>
                     <Card.Text>
                       People that are being cyber-bullied or that are threatened
-                      online, can report to www.safe and www.safe reports to the
-                      government agencies that deal with this sort of problem.
+                      online, can report to www.safe, and www.safe reports to
+                      the government agencies that deal with this sort of
+                      problem.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <CardSeeMore>
+                      <a
+                        href="https://github.com/elionntechguy/www.safe"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        see more <i className="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </CardSeeMore>
+                    <BuiltWith>
+                      <a href="https://www.djangoproject.com/">
+                        <img src={django} alt="django" />
+                      </a>
+                    </BuiltWith>
                   </Card.Body>
                 </Card>
               </Col>
             </Row>
-            <div className="work-end">
-              <a href="https://github.com/elionntechguy" target="_blank">
-                & more
-              </a>
-            </div>
+          </div>
+          <div className="work-end">
+            <a
+              href="https://github.com/elionntechguy"
+              target="_blank"
+              rel="noreferrer"
+            >
+              & more
+            </a>
           </div>
         </Container>
       </WorkMainContainer>
