@@ -24,15 +24,28 @@ export const TransparentNav = styled(Navbar)`
   }
 `;
 
+// Clip-path Background
 export const BgDiv = styled.div`
-  background: url(${bg});
+  position: relative;
+
+  &::before {
+    z-index: -1;
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(${bg});
+    clip-path: polygon(32% 0%, 63% 100%, 99% 100%, 100% 0);
+  }
 `;
 
 export const HomeMainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
 
   .intro {
     text-align: center;
@@ -68,5 +81,63 @@ export const WorkButtonMain = styled.button`
   &:hover {
     color: ${black};
     background-color: ${orange};
+  }
+`;
+
+export const AboutMainContainer = styled.div`
+  height: 120vh;
+
+  margin-top: 64px;
+
+  .about-info {
+    margin-top: 10%;
+    font-size: 22px;
+
+    .row > * {
+      padding: 20px;
+    }
+  }
+
+  .about-greeting {
+    text-align: center;
+  }
+`;
+
+export const WorkMainContainer = styled.div`
+  height: 100vh;
+
+  .work-intro {
+    text-align: center;
+  }
+
+  .project-cards {
+    padding: 16px;
+  }
+
+  .col {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+  .card {
+    border-radius: 0.5rem;
+    border-color: ${orange};
+
+    img {
+      border-radius: 6.5px;
+    }
+  }
+
+  .work-end {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .work-end > a {
+    color: ${orange};
+    text-decoration: none;
   }
 `;
