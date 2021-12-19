@@ -1,21 +1,13 @@
-import { Nav, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
-import { TransparentNav } from "../styles";
+import { TransparentNav } from "../styles/NavBarStyles";
 
-export const NavigationBar = () => {
+export const NavigationBar: React.FC = () => {
   return (
     <>
-      <TransparentNav fixed="top" expand="lg" variant="light" bg="light">
+      <TransparentNav expand="lg" variant="light" bg="light">
         <Container fluid>
           <TransparentNav.Brand href="#">e</TransparentNav.Brand>
-          {/* <TransparentNav.Toggle />
-          <TransparentNav.Collapse>
-            <Nav className="ms-auto">
-              <Nav.Link href="#">about</Nav.Link>
-              <Nav.Link href="#">work</Nav.Link>
-              <Nav.Link href="#">contact</Nav.Link>
-            </Nav>
-          </TransparentNav.Collapse> */}
         </Container>
       </TransparentNav>
     </>

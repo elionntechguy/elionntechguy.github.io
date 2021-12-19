@@ -1,25 +1,20 @@
+import { lazy } from "react";
+
 import { Container } from "react-bootstrap";
+import { BgDiv, HomeMainContainer } from "../styles/HomeStyles";
 
-import { BgDiv, HomeMainContainer, WorkButtonMain } from "../styles";
+const HomeMain = lazy(() => import("../components/homeComponents/HomeMain"));
 
-export const Home = () => {
+const Home: React.FC = () => {
   return (
     <BgDiv>
       <Container>
         <HomeMainContainer>
-          <div className="intro">
-            <h1 className="intro-title">
-              Hi, I'm <span>Elion</span>.
-            </h1>
-            <h1 className="intro-desc">I'm a full stack web developer.</h1>
-            <div className="intro-btn">
-              <WorkButtonMain>
-                View my work <i className="bi bi-arrow-down"></i>
-              </WorkButtonMain>
-            </div>
-          </div>
+          <HomeMain />
         </HomeMainContainer>
       </Container>
     </BgDiv>
   );
 };
+
+export default Home;

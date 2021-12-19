@@ -7,6 +7,7 @@ import "./index.css";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "@fontsource/oxygen";
 import "@fontsource/condiment";
 

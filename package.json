@@ -1,4 +1,5 @@
 {
+  "homepage": "http://elionntechguy.github.io",
   "name": "portfolio-app",
   "version": "0.1.0",
   "private": true,
@@ -14,9 +15,11 @@
     "@types/react-dom": "^17.0.11",
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.7.1",
+    "p-min-delay": "^4.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",
     "react-dom": "^17.0.2",
+    "react-loader-spinner": "^4.0.0",
     "react-scripts": "4.0.3",
     "react-skillbars": "^1.6.1",
     "styled-components": "^5.3.3",
@@ -27,7 +30,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
