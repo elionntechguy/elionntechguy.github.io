@@ -3,8 +3,6 @@ import { lazy, Suspense } from "react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme/theme";
 
-import { GlobalStyle } from "./styles/global";
-
 import LoadingPage from "./components/LoadingPage";
 
 import { NavigationBar } from "./components/NavigationBar";
@@ -21,7 +19,6 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Suspense fallback={<LoadingPage />}>
-        <GlobalStyle />
         <NavigationBar />
         <Home />
         <About />
