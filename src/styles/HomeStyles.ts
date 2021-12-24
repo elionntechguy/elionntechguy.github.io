@@ -14,7 +14,7 @@ export const BgDiv = styled.div`
     height: 100%;
     width: 100%;
     background: url(${bg});
-    clip-path: polygon(32% 0%, 63% 100%, 99% 100%, 100% 0);
+    clip-path: polygon(32% 0%, 63% 100%, 100% 100%, 100% 0);
   }
 `;
 
