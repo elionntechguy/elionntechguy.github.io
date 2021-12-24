@@ -13,8 +13,7 @@ const ContactMain: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const webhookURL =
-      "https://hooks.slack.com/services/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";
+    const webhookURL = `${process.env.REACT_APP_SLACK_URL}`;
     const myData = {
       text: `Name: ${name} \nEmail: ${email} \nMessage: ${message}`,
     };
