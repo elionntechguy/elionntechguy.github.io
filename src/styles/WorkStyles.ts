@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WorkMainContainer = styled.div`
-  padding-top: 10%;
+  padding-top: 10rem;
 
   .work-intro {
     text-align: center;

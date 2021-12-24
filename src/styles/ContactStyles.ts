@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ContactMainContainer = styled.div`
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 
   .contact-intro {
     text-align: center;
