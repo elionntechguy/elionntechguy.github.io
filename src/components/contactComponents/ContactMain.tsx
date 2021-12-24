@@ -69,6 +69,9 @@ const ContactMain: React.FC = () => {
               placeholder="Your message"
               rows={7}
             />
+            <Form.Text className="text-muted">
+              Fill out all the inputs to submit.
+            </Form.Text>
           </Form.Group>
           <Button variant="warning" type="submit" disabled={!validateForm()}>
             Submit
