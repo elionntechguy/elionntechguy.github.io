@@ -2,8 +2,6 @@ import { useState } from "react";
 
 import { Form, Button, Alert } from "react-bootstrap";
 
-import { fetchSlack } from "../../utils/fetchSlack";
-
 const ContactMain: React.FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -13,13 +11,16 @@ const ContactMain: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const webhookURL = `${process.env.REACT_APP_SLACK_URL}`;
-    const myData = {
-      text: `Name: ${name} \nEmail: ${email} \nMessage: ${message}`,
-    };
-
     try {
-      await fetchSlack(webhookURL, myData);
+      fetch("http://127.0.0.1:8000/form", {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+        }),
+      });
       setName("");
       setEmail("");
       setMessage("");
