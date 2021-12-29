@@ -12,7 +12,7 @@ const ContactMain: React.FC = () => {
     event.preventDefault();
 
     try {
-      fetch("http://127.0.0.1:8000/form", {
+      fetch("https://elionsportfoliobackend.glitch.me/form", {
         method: "POST",
         mode: "no-cors",
         body: JSON.stringify({
